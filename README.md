@@ -72,9 +72,25 @@ my-springboot-app/
 └── build.gradle                      # Gradle 설정 파일 (Gradle 프로젝트일 경우)
 ```
 
-개인적으로  gradle이 좀더 세팅하기엔 간편한것 같다.
 
+## Springboot Db 설정방법.
+1. application.properties  or application.yml
+2. **@Configuration** 사용하여  java 파일을 설정파일로 인식해주기.
+```
+@Configuration
+public class DatabaseConfig {
 
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/mydatabase");
+        dataSource.setUsername("username");
+        dataSource.setPassword("password");
+        return dataSource;
+    }
+``` 
+ 
 
 
 
