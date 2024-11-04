@@ -9,6 +9,14 @@
 ```
 1.pom.xml:
  Maven의 빌드 정보를 담고 있는 파일로 ( Project Object Model 의 약자)
+
+
+![image](https://github.com/user-attachments/assets/b7f5dc9a-544f-46c1-a8cd-00bb96067766)
+
+
+
+
+
 2.web.xml:
  WAS(Web Application Server)가 최초로 구동될 때, web.xml파일을 읽어서 메모리에 올리고 웹에서 사용하는 다양한 설정들을 하는 곳 즉, Web Application 설정을 위한 Deployment descriptor(DD, 배포 설명자) 라고 한다
 Client에게 요청 받아올 때 web.xml에 정의되어 있는 URL이 Client 요청 URL과 매핑이 되는 경우 DispatcherServlet 이 이요청을 가로채가서 서비스를 제공하도록 합니다.
